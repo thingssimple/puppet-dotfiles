@@ -1,3 +1,8 @@
+include homebrew
+
 class dotfiles {
-  anchor { 'Hello_World': }
+  homebrew::tap { 'thoughtbot/formulae': }
+  package { 'rcm':
+    ensure => present
+  }
 }
