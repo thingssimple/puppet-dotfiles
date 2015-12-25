@@ -7,10 +7,7 @@ class dotfiles {
     ensure => present
   }
 
-  $home = "/Users/${::boxen_user}"
-
   exec { 'rcup':
     command => 'rcup',
-    require => File["${home}/.dotfiles"],
   }
 }
