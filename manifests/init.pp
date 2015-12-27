@@ -9,5 +9,6 @@ class dotfiles {
 
   exec { 'rcup':
     command => 'rcup',
+    user    => $::boxen_user
   }
 }
